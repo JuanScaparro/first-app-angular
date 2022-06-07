@@ -14,7 +14,7 @@ export class AppComponent {
   arr = ['hola', 'dia', 'feliz']
 
   constructor(){
-    this.setName('juan')
+    // this.setName('juan')
 
 
   }
@@ -26,6 +26,14 @@ export class AppComponent {
       this.isVisible = true
     }, 3000)
   };
+
+  public setMessageLolo(e: any) {
+    console.log(e)
+  }
+
+  public toggleVisible() {
+    this.isVisible = !this.isVisible
+  }
 
 
 }

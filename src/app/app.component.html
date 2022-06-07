@@ -8,12 +8,14 @@
   <li *ngFor=" let item of arr">{{item}}</li>
 </ul> -->
 
-<app-valen *ngIf="isVisible"></app-valen>
+
 <h1>App Components</h1>
 
-<app-lolo 
+<app-lolo *ngIf="isVisible"
   [title]="name"
+  (emitter)="setMessageLolo($event)"
 ></app-lolo>
+
 <app-valen></app-valen>
 <app-valen></app-valen>
-<button class="btn btn-primary">submit</button>
+<button class="btn btn-primary" (click)="toggleVisible()" >submit</button>
