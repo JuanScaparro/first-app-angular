@@ -11,6 +11,7 @@ import { ProvidersComponent } from './pages/providers/providers.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SalesComponent } from './pages/sales/sales.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { MockComponent } from './shared/mock/mock.component';
 
 
 const routes: Routes = [
@@ -53,7 +54,8 @@ const routes: Routes = [
     ProvidersComponent,
     ProductsComponent,
     SalesComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    MockComponent
   ],
   imports: [
     BrowserModule,

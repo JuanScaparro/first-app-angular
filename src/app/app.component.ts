@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  public navBarTitle: string;
+  public mockMessage: string;
+  public footerCopy: string;
 
-  constructor(){
+  constructor(  ){
+    this.navBarTitle = 'Naturalmente';
+    this.mockMessage = 'Este es un mensaje de app component para mock component';
+    this.footerCopy = 'Desarrollado por Juan Manuel'
   }
 
 
