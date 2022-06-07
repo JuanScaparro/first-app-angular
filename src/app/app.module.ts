@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -13,6 +14,7 @@ import { SalesComponent } from './pages/sales/sales.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { MockComponent } from './shared/mock/mock.component';
 
+import { UserService } from './services/user.service';
 
 const routes: Routes = [
   
@@ -59,9 +61,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+    providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
