@@ -14,17 +14,10 @@ export class AppComponent {
   arr = ['hola', 'dia', 'feliz']
 
   constructor(){
-    // this.setName('juan')
-
-
   }
 
-  setName(name: string) {
+  private setName(name: string) {
     this.name = name;
-    setTimeout(() =>{
-      this.name = 'beto'
-      this.isVisible = true
-    }, 3000)
   };
 
   public setMessageLolo(e: any) {
@@ -33,6 +26,8 @@ export class AppComponent {
 
   public toggleVisible() {
     this.isVisible = !this.isVisible
+    this.isVisible ? this.setName('Juan') : this.setName('')
+    
   }
 
 
