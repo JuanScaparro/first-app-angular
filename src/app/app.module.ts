@@ -10,9 +10,11 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { ProvidersComponent } from './pages/providers/providers.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SalesComponent } from './pages/sales/sales.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 
 const routes: Routes = [
+  
   {
     path: 'clientes',
     component: CustomersComponent
@@ -33,6 +35,10 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ]
 
 
@@ -46,7 +52,8 @@ const routes: Routes = [
     CustomersComponent,
     ProvidersComponent,
     ProductsComponent,
-    SalesComponent
+    SalesComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
