@@ -1,21 +1,5 @@
-<!-- <h2>{{message}}</h2>
+<app-header></app-header>
 
-<h3>{{name}}</h3>
+<router-outlet></router-outlet>
 
-<div *ngIf="isVisible" id="el"></div>
-
-<ul>
-  <li *ngFor=" let item of arr">{{item}}</li>
-</ul> -->
-
-
-<h1>App Components</h1>
-
-<app-lolo *ngIf="isVisible"
-  [title]="name"
-  (emitter)="setMessageLolo($event)"
-></app-lolo>
-
-<app-valen></app-valen>
-<app-valen></app-valen>
-<button class="btn btn-primary" (click)="toggleVisible()" >submit</button>
+<app-footer></app-footer>
