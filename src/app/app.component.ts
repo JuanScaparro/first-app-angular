@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-app';
+  
+  message = 'HOLA MUNDO!!!';
+  name = '';
+  isVisible = false;
+
+  arr = ['hola', 'dia', 'feliz']
+
+  constructor(){
+    this.setName('juan')
+
+
+  }
+
+  setName(name: string) {
+    this.name = name;
+    setTimeout(() =>{
+      this.name = 'beto'
+      this.isVisible = true
+    }, 3000)
+  };
+
+
 }
+
