@@ -1,0 +1,12 @@
+.color {
+  background-color: #333;
+  color: orangered;
+}
+
+.color:hover {
+  color: orange;
+}
+
+.title-color {
+  color: orangered;
+}
