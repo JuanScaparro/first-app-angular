@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { IUser } from '../../interfaces/iuser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  @Input() homeUserData: IUser[];
+
+  constructor() {
+    this.homeUserData = [];
+   }
 
   ngOnInit(): void {
     console.log('Home Init')

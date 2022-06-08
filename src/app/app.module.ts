@@ -15,6 +15,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { MockComponent } from './shared/mock/mock.component';
 
 import { UserService } from './services/user.service';
+import { ObjToArrayPipe } from './pipes/obj-to-array.pipe';
 
 const routes: Routes = [
   
@@ -57,7 +58,8 @@ const routes: Routes = [
     ProductsComponent,
     SalesComponent,
     NotfoundComponent,
-    MockComponent
+    MockComponent,
+    ObjToArrayPipe
   ],
   imports: [
     BrowserModule,
