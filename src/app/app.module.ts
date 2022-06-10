@@ -16,9 +16,13 @@ import { MockComponent } from './shared/mock/mock.component';
 
 import { UserService } from './services/user.service';
 import { ObjToArrayPipe } from './pipes/obj-to-array.pipe';
+import { CartComponent } from './shared/cart/cart.component';
 
 const routes: Routes = [
-  
+  {
+    path: '',
+    component: HomeComponent
+  },
   {
     path: 'clientes',
     component: CustomersComponent
@@ -34,10 +38,6 @@ const routes: Routes = [
   {
     path: 'ventas',
     component: SalesComponent
-  },
-  {
-    path: '',
-    component: HomeComponent
   },
   {
     path: '**',
@@ -59,7 +59,8 @@ const routes: Routes = [
     SalesComponent,
     NotfoundComponent,
     MockComponent,
-    ObjToArrayPipe
+    ObjToArrayPipe,
+    CartComponent
   ],
   imports: [
     BrowserModule,

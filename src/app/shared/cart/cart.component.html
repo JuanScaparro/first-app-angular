@@ -1,0 +1,12 @@
+<div class="scart">
+  <p>{{totalProducts}}</p>
+</div>
+<ng-container>
+  <div class="cart-item" *ngFor="let item of products">
+    <p>{{item.name}}</p>
+    <p>{{item.category}}</p>
+    <p>{{item.price}}</p>
+  </div>
+</ng-container>
+
+

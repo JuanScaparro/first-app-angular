@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from './services/user.service';
-import { IUser } from './interfaces/iuser';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,32 +6,23 @@ import { IUser } from './interfaces/iuser';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   
   public navBarTitle: string;
   public mockMessage: string;
   public footerCopy: string;
-  public homeUserData: IUser[];
-  private users: any;
 
 
-  constructor( private userService: UserService ){
+  constructor(){
     this.navBarTitle = 'Distribuidora Naturalmente';
     this.mockMessage = 'Este es un mensaje de app component para mock component';
     this.footerCopy = 'Desarrollado por Juan Manuel';
-    this.homeUserData = [];
   };
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(
-      data => this.userData( data )
-    )
   };
 
-  userData( data: any ) {
-    this.users = data;
-    this.homeUserData = this.users.users;
-    console.log(this.homeUserData)
+  ngOnDestroy(): void {
   };
 
 };
